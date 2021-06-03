@@ -1,0 +1,41 @@
+ALGORITHM permutation 
+VAR
+ n,month,day,year:INTEGER;
+ ML:STRING
+   
+BEGIN
+  Write('enter n')
+  Read(n)
+ year:=n%100;
+ month:=((n-year)/100)%100;
+ day:=((n-year)/100-month)/100;
+
+ IF (month>12 or month=00 or day>31) THEN
+
+    Write('invalid format')
+
+ ELSE_IF (month=02 AND (year %4=0) AND day>29 ) THEN
+    Write ('invalid format')
+ ELSE_IF (month=02 AND (year%4<> 0) AND day> 28) THEN
+     Write('invalid')
+ ELSE_IF ((month=04 OR month=06 OR month=09 OR month=11 )  AND day>30)
+   Write('invalid')
+
+ELSE
+SWITCH (month) DO
+    case 01 : ML:='JANUARY';
+    
+
+
+   BREAK;
+
+    case value : set_instructions
+   
+END_SWITCH
+
+ Write ( 'day :' day )
+  Write ( 'month :' ML)
+   Write ( 'year :' year+2000 )
+ Write (ML day, year+2000)
+ END_IF
+END

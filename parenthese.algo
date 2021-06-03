@@ -1,0 +1,28 @@
+ALGORITHM parenthese
+VAR
+    c:CHAR;
+    counter:INTEGER:=0;
+    condition:BOOLEAN:=TRUE
+BEGIN
+ WHILE ( c<>'#' AND counter<0) DO
+    IF (NOT isDigit(c)  
+    AND c <> '+'   AND c <> '-'  
+    AND c <> '*'    AND c <> '/' 
+  AND c <> '('   AND c <> ')' ) THEN
+        condition:= FALSE
+    END_IF
+IF (c='(') THEN
+    counter:=counter+1
+END_IF
+IF (c=')') THEN
+    counter:=counter-1
+END_IF
+     
+ END_WHILE
+
+ IF (condition=TRUE AND counter=0) THEN
+     Write('valid')
+ ELSE
+     Write('invalid')
+ END_IF
+END
